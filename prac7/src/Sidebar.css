@@ -1,0 +1,121 @@
+/* Sidebar.css */
+.sidebar-container {
+    display: flex;
+    position: relative;
+    height: 100%;
+    align-items: flex-start;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #46c8e2;
+    height: 100vh;
+    transition: transform 0.3s ease, width 0.3s ease;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    transform: translateX(-100%);
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 999; /* Ensure the sidebar is on top */
+}
+
+.sidebar.open {
+    transform: translateX(0);
+}
+
+.toggle-btn {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    background-color: #000000;
+    border: none;
+    color: #8e9514;
+    padding: 12px 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    z-index: 1000; /* Ensure it stays above the sidebar */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.toggle-btn:hover {
+    background-color: #3b5368;
+}
+
+.menu-items {
+    list-style: none;
+    padding-top: 80px; /* Ensure padding allows spacing from the toggle button */
+    margin: 0;
+}
+
+.menu-items li {
+    padding: 15px 25px;
+    color: #40c0e0;
+    cursor: pointer;
+    transition: background-color 0.3s ease, padding-left 0.3s ease;
+    display: flex;
+    align-items: center;
+}
+
+.menu-items li:hover {
+    background-color: #34495e;
+    padding-left: 30px; /* Subtle hover effect for better interaction */
+}
+
+.menu-items li span {
+    margin-left: 15px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.menu-items li.active {
+    background-color: #1abc9c; /* Highlight active menu item */
+    color: #ffffff;
+}
+
+.menu-items li.active span {
+    font-weight: 600;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .sidebar {
+        width: 220px;
+    }
+
+    .menu-items li {
+        font-size: 16px;
+        padding: 15px 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 180px;
+    }
+
+    .menu-items li {
+        font-size: 14px;
+    }
+
+    .toggle-btn {
+        padding: 10px 12px;
+    }
+}
+
+@media (max-width: 576px) {
+    .sidebar {
+        width: 160px;
+    }
+
+    .menu-items li {
+        font-size: 14px;
+    }
+
+    .toggle-btn {
+        top: 10px;
+        left: 10px;
+        padding: 8px 10px;
+    }
+}

@@ -1,0 +1,86 @@
+.calculator {
+  width: 360px;
+  margin: 100px auto;
+  padding: 20px;
+  border-radius: 15px;
+  background: linear-gradient(145deg, #2a2a2a, #1e1e1e);
+  box-shadow: 12px 12px 24px #181818, -12px -12px 24px #3a3a3a;
+  color: #f0f0f0;
+  font-family: 'Roboto', sans-serif;
+}
+
+.display {
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: #333333;
+  border-radius: 10px;
+  text-align: right;
+  box-shadow: inset 2px 2px 5px #242424, inset -2px -2px 5px #444444;
+  font-size: 1.2em;
+  color: #00e5ff; /* Cool cyan color for the display text */
+}
+
+.result {
+  font-size: 0.9em;
+  color: #a8dadc; /* Light cool color for the previous result */
+  display: flex;
+  justify-content: space-between;
+}
+
+.input {
+  font-size: 2em;
+  color: #f1faee; /* Light neutral color for the current input */
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+button {
+  padding: 20px;
+  font-size: 1.4em;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  background: linear-gradient(145deg, #457b9d, #1d3557); /* Blue gradient */
+  box-shadow: 5px 5px 10px #1f1f1f, -5px -5px 10px #373737;
+  color: #f0f0f0;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+button:hover {
+  box-shadow: 3px 3px 7px #1f1f1f, -3px -3px 7px #373737;
+  transform: translateY(-2px);
+}
+
+button:active {
+  background: linear-gradient(145deg, #1d3557, #457b9d);
+  box-shadow: inset 2px 2px 5px #1f1f1f, inset -2px -2px 5px #373737;
+  transform: translateY(2px);
+}
+
+.operator {
+  background: linear-gradient(145deg, #06d6a0, #118ab2); /* Teal gradient for operators */
+}
+
+.buttons button:nth-child(1),
+.buttons button:nth-child(2),
+.buttons button:nth-child(3),
+.buttons button:nth-child(4),
+.buttons button:nth-child(5) {
+  grid-column: span 1;
+}
+
+.buttons button:nth-last-child(1),
+.buttons button:nth-last-child(2) {
+  grid-column: span 2;
+}
+
+.buttons1 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 10px;
+}
